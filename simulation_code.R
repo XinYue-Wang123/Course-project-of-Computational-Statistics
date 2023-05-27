@@ -19,7 +19,7 @@ mydata1 <- function(n, miu, sigma, beta){
 }
 
 
-####=== S1.2 setting a: ¦Â=(2,3) ===####
+####=== S1.2 setting a: Â¦Ã‚=(2,3) ===####
 set.seed(123)
 traindata.a <- mydata1(n = 1000, miu = 0, sigma = 1, beta = c(2, 3))
 x           <- cbind(traindata.a$x.1, traindata.a$x.2, traindata.a$x.3)
@@ -43,7 +43,7 @@ cv.sim.a
 plot(cv.sim.a, lwd = 2)
 
 
-####=== S1.3 setting b: ¦Â=(-2,3) ===####
+####=== S1.3 setting b: Â¦Ã‚=(-2,3) ===####
 set.seed(123)
 traindata.b <- mydata1(n = 1000, miu = 0, sigma = 1, beta = c(-2, 3))
 x           <- cbind(traindata.b$x.1, traindata.b$x.2, traindata.b$x.3)
@@ -104,11 +104,11 @@ for (i in 1:100){ # generate 100 design of X #
   set.seed(123)
   S <- rwishart(100, nu = 13, Sigma = diag(p)) [, , i]
 
-  # verify Strong Irrepresentable Condition by ¦Ç #
+  # verify Strong Irrepresentable Condition by Â¦Ã‡ #
   sim.data <- mydata2(n, p, q, beta, S)
   
-  X1  <- as.matrix( sim.data[ , 2:(q+1)] )     # X with non-zero ¦Â
-  X2  <- as.matrix( sim.data[ , (q+2):(p+1)] ) # X with zero ¦Â
+  X1  <- as.matrix( sim.data[ , 2:(q+1)] )     # X with non-zero Â¦Ã‚
+  X2  <- as.matrix( sim.data[ , (q+2):(p+1)] ) # X with zero Â¦Ã‚
   C11 <- 1/n * t(X1) %*% X1
   C21 <- 1/n * t(X2) %*% X1
   beta.sign <- as.matrix(sign(beta[1:q]))
@@ -135,9 +135,9 @@ for (i in 1:100){ # generate 100 design of X #
 }
 
 # plot #
-plot(eta, type = 'p', pch = 20, xlab=' ', ylab='¦Ç¡Ş')
+plot(eta, type = 'p', pch = 20, xlab=' ', ylab='Â¦Ã‡Â¡Ã')
 abline(h = 0, lty = 2)
 plot(eta,percentage, type = 'p', pch = 20, 
-     xlab='¦Ç¡Ş', ylab='Percentage of Lasso Selecting the Correct Model')
+     xlab='Â¦Ã‡Â¡Ã', ylab='Percentage of Lasso Selecting the Correct Model')
 abline(v = 0, lty = 2)
 
