@@ -1,3 +1,6 @@
+**********  Stata code for application of Lasso   **********
+
+
 
 use "Z:\Desktop\code.dta", clear
 * keep hhid region rural pop a2000a E_indirect_energy E_direct_energy total_income_w edu_mean health_mean age_mean house_area
