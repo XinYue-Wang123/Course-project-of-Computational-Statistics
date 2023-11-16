@@ -1,4 +1,8 @@
 
+############ R code for Simulation ############
+
+
+
 ############ Simulation Example 1: (In)Consistency with 3 Variables ############
 rm(list=ls())
 library(Matrix)
