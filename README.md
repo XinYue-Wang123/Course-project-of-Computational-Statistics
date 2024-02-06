@@ -11,8 +11,8 @@ Welcome to the repository for my course project of Computational Statistics, Sum
 
   **Author**: Xinyue Wang
 
-  **Grade**: This project received a final grade of 1.3
-
+  **Grade**: 
+  This project received a final grade of 1.3 ("very good" in the German university grading system).
 
 ## Repository Structure
 
